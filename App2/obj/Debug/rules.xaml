@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="App2.rules"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="BINDU" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="rules" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+
+            <ScrollViewer HorizontalAlignment="Left" Height="491" Margin="10,0,0,0" VerticalAlignment="Top" Width="352">
+
+                <TextBlock x:ConnectionId='1' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="799" Width="342" FontSize="18"                                              >
+                	<Run Text="How to Play:&#xD;&#xA; • Complete as Many as square as possible and earn coins&#xD;&#xA; • Draw line by dragging from 1 pt to other.If line completes square,draw additional line.&#xD;&#xA; • Turn end when drawn line doesn't complete square.&#xD;&#xA;&#xD;&#xA;Beginner Level: &#xD;&#xA; • Coins earned by you is the no. of squares you complete.&#xD;&#xA;&#xD;&#xA;Intermediate Level:&#xD;&#xA; • There are certain coins at  every square.Coins earned is sum of coins of all square you complete.&#xD;&#xA;&#xD;&#xA;Pro Level:&#xD;&#xA; • Coins at every square are assigned.&#xD;&#xA; • Each Player bets on 3  squares that he will make.&#xD;&#xA; • If you are successful in making the square you earn double the coins at that square otherwise lose the coins by that amount."/>
+                	<LineBreak/>
+                	<Run Text="&#xD;&#xA;Huha:"/>
+                	<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="&#xA; • "/>
+                	<Run Text="Now there are hidden coins and monsters which can take the coins from you and some visible coins. Coins earned by you is some of coins earned according to the rule."/>
+                </TextBlock>
+
+            </ScrollViewer>
+
+
+        </Grid>
+    </Grid>
+</Page>
+

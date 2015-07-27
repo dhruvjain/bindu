@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App2.name"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="BINDU" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="name please" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="p1" HorizontalAlignment="Left" Margin="10,39,0,0" Text="Player 1" VerticalAlignment="Top" Width="342"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="p2" HorizontalAlignment="Left" Margin="10,120,0,0" Text="Player2" VerticalAlignment="Top" Width="342"/>
+            <Button Content="Start" HorizontalAlignment="Left" Margin="122,208,0,0" VerticalAlignment="Top" FontSize="36" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+</Page>
